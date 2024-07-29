@@ -4,10 +4,11 @@ import React, { ChangeEvent } from 'react';
 
 interface DynamicInterface {
   element: FormInterface
+  index: number
   setLeaveData: any
 }
 
-const DynamicComponent = ({ element, setLeaveData }: DynamicInterface) => {
+const DynamicComponent = ({ element, index, setLeaveData }: DynamicInterface) => {
 
   const handleChange = (e: ChangeEvent<HTMLFormElement>) => {
     setLeaveData((prevData: Record<string, string>) => ({
@@ -18,6 +19,7 @@ const DynamicComponent = ({ element, setLeaveData }: DynamicInterface) => {
 
   const props = {
     ...element.props,
+    key: index,
     onChange: element.tag === 'input' ? handleChange : undefined,
     htmlFor: element.tag === 'label' ? element.props.htmlFor : undefined
   };

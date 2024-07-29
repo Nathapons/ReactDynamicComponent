@@ -39,7 +39,7 @@ export const page: React.FC = () => {
       {formComp.map((element, index) => {
         return (
           <div key={index}>
-            <DynamicComponent element={element} setLeaveData={setLeaveData} />
+            <DynamicComponent element={element} index={index} setLeaveData={setLeaveData} />
           </div>
         )
       })}
