@@ -22,6 +22,7 @@ export const page: React.FC = () => {
   }
 
   useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_API_URL)
     const tenantId = searchParams.get('tenantId');
     const tenantIdNumber = tenantId ? parseInt(tenantId) : 1;
 
@@ -37,8 +38,8 @@ export const page: React.FC = () => {
     <form onSubmit={handleSubmit}>
       {formComp.map((element, index) => {
         return (
-          <div>
-            <DynamicComponent element={element} index={index} setLeaveData={setLeaveData} />
+          <div key={index}>
+            <DynamicComponent element={element} setLeaveData={setLeaveData} />
           </div>
         )
       })}
