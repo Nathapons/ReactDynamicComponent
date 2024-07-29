@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getJsonData } from "@/app/utils/json";
+import { getJsonData } from "@/utils/json";
 
 export async function GET(req: Request, context: any) {
     const { formId } = context.params;
