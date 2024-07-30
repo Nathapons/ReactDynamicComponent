@@ -1,0 +1,181 @@
+{
+    "1": [
+        {
+            "tag": "h1",
+            "props": {
+                "dangerouslySetInnerHTML": {
+                    "__html": "Leave Form Request"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "label",
+            "props": {
+                "htmlFor": "leaveType",
+                "style": {"marginTop": "10px"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "ประเภทของการลาหยุด <span style=\"color: red\">*</span> :"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "select",
+            "props": {
+                "name": "leaveType",
+                "style": {"marginTop": "10px"}
+            },
+            "children": [
+                {
+                    "tag": "option",
+                    "props": {
+                        "value": ""
+                    },
+                    "children": ["Please select an option"]
+                },
+                {
+                    "tag": "option",
+                    "props": {
+                        "value": "option1"
+                    },
+                    "children": ["Option 1"]
+                },
+                {
+                    "tag": "option",
+                    "props": {
+                        "value": "option2"
+                    },
+                    "children": ["Option 2"]
+                }
+            ]
+        },
+        {
+            "tag": "label",
+            "props": {
+                "htmlFor": "description",
+                "style": {"marginTop": "10px"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "เหตุผลในการลาหยุด <span style=\"color: red\">*</span> :"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "textarea",
+            "props": {
+                "row": "10",
+                "column": "50",
+                "name": "description",
+                "style": {"marginTop": "10px"}
+            },
+            "children": []
+        },
+        {
+            "tag": "button",
+            "props": {
+                "type": "submit",
+                "style": {"color": "white", "marginTop": "10px", "backgroundColor": "blue"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "ส่ง"
+                }
+            },
+            "children": []
+        }
+    ],
+    "2": [
+        {
+            "tag": "h1",
+            "props": {
+                "dangerouslySetInnerHTML": {
+                    "__html": "Approval Request"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "label",
+            "props": {
+                "htmlFor": "firstname",
+                "style": {"marginTop": "10px"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "First name:"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "input",
+            "props": {
+                "type": "text",
+                "name": "firstname",
+                "id": "firstname",
+                "style": {"marginTop": "10px"}
+            },
+            "children": []
+        },
+        {
+            "tag": "button",
+            "props": {
+                "type": "submit",
+                "style": {"color": "red", "marginTop": "10px"}
+            },
+            "children": ["Submit"]
+        }
+    ],
+    "3": [
+        {
+            "tag": "h1",
+            "props": null,
+            "children": ["Login"]
+        },
+        {
+            "tag": "label",
+            "props": {
+                "htmlFor": "username",
+                "style": {"marginTop": "10px"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "Username:"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "input",
+            "props": {
+                "type": "text",
+                "name": "username",
+                "style": {"marginTop": "10px"}
+            },
+            "children": []
+        },
+        {
+            "tag": "label",
+            "props": {
+                "htmlFor": "password",
+                "style": {"marginTop": "10px"},
+                "dangerouslySetInnerHTML": {
+                    "__html": "Password:"
+                }
+            },
+            "children": []
+        },
+        {
+            "tag": "input",
+            "props": {
+                "type": "password",
+                "name": "password",
+                "style": {"marginTop": "10px"}
+            },
+            "children": []
+        },
+        {
+            "tag": "button",
+            "props": {
+                "type": "submit",
+                "style": {"color": "red", "marginTop": "10px"}
+            },
+            "children": ["Submit"]
+        }
+    ]
+}

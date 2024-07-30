@@ -13,12 +13,15 @@ export const page: React.FC = () => {
   const [leaveData, setLeaveData] = useState<{ [key: string]: any }>({});
 
   const getLeaveFormData = async (tenantIdNumber: number) => {
-    try {
-      const response = await axios.get(`apis/v1/leaveform/${tenantIdNumber}`);
-      setFormComp(response.data)
-    } catch (error) {
-      console.error('Error fetching leave form data:', error);
-    }
+    await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/form/${tenantIdNumber}`).then(
+      (response) => {
+        setFormComp(response.data)
+      }
+    ).catch(
+      (error) => {
+        console.error('Error fetching leave form data:', error)
+      }
+    )
   }
 
   useEffect(() => {
