@@ -1,11 +1,15 @@
 "use client";
+import AntdLayout from "@/components/antdLayout";
+import LoginComponent from "@/components/loginComponent";
 import React from "react";
 
+
 const Home: React.FC = () => {
+
   return (
-    <div>
-        <h1>Form</h1>
-    </div>
+    <AntdLayout>
+      <LoginComponent />
+    </AntdLayout>
   );
 }
 

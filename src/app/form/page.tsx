@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import FormInterface from '@/interface/FormInterface';
 import DynamicComponent from '@/components/dynamicComponent';
+import AntdLayout from "@/components/antdLayout";
 
 
 export const page: React.FC = () => {
@@ -38,15 +39,17 @@ export const page: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      {formComp.map((element, index) => {
-        return (
-          <div key={index}>
-            <DynamicComponent element={element} index={index} setLeaveData={setLeaveData} />
-          </div>
-        )
-      })}
-    </form>
+    <AntdLayout>
+      <form onSubmit={handleSubmit}>
+        {formComp.map((element, index) => {
+          return (
+            <div key={index}>
+              <DynamicComponent element={element} index={index} setLeaveData={setLeaveData} />
+            </div>
+          )
+        })}
+      </form>
+    </AntdLayout>
   );
 }
 
